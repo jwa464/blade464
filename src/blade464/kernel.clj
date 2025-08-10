@@ -94,7 +94,7 @@
   (z80/reset-z80)
   (init-kernel k))
 
-
+;;;  this is using stack?? it should be RST operands
 (defkernfn low-jump [k] 0x8  ; RST 1
   (let [low-addr (z80/pop-val)
         addr (bit-and 0x3f low-addr)]
